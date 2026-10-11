@@ -17,12 +17,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="design.css?v=20261011e">
+<link rel="stylesheet" href="design.css?v=20261012a">
+<link rel="stylesheet" href="series.css?v=20261012a">
 </head>
 <body>
 
+<div class="series-bar"><span>HOKKAIDO CUP SERIES</span><a href="#system">ROAD TO THE CHAMPIONS LEAGUE ↗</a><span>2027 SEASON</span></div>
 <header class="top" id="top">
-  <a class="brand" href="#"><img src="img/logo.png" alt=""><span>モルック北海道カップ</span></a>
+  <a class="brand" href="#"><img src="img/logo.png" alt=""><span>MÖLKKY<br>HOKKAIDO CUP</span></a>
   <nav>
     <a href="#concept">コンセプト</a>
     <a href="#schedule">大会日程</a>
@@ -50,11 +52,30 @@
       </div>
     </div>
   </div>
-  <div class="hero-caption">HOKKAIDO / 一投に、すべてを。</div>
+  <div class="hero-caption">ONE THROW.<br>ALL IN.</div><a class="hero-scroll" href="#schedule">EXPLORE THE SEASON ↓</a>
 
 </div>
 
 <div class="next-race"><div class="wrap"><div class="countdown" id="countdown" hidden></div><a class="next-link" href="#schedule">大会日程を見る ↗</a></div></div>
+
+<section class="road" id="schedule">
+  <div class="wrap">
+    <div class="road-head">
+      <div>
+        <div class="eyebrow rv">年間スケジュール / <span id="yr2"></span></div>
+        <div class="display-label">EXPLORE<br>THE SEASON<span class="season-index">2027</span></div><h2 class="sec-title rv d1">北海道を巡る。<br>頂点を目指す。</h2>
+        <p class="sec-lead rv d2">冬のミニ大会からはじまり、秋のCLでシーズンが終わります。<b class="o">ポイントがつく大会</b>に出て、CL出場を目指しましょう。</p>
+      </div>
+    </div>
+    <div class="notice rv"><i>開催予定</i><span id="note"></span></div>
+    <p class="photo-note">写真は過去大会の様子です。</p>
+    <div class="event-filters" aria-label="大会の種類"><button type="button" class="active" data-filter="all" aria-pressed="true">ALL EVENTS</button><button type="button" data-filter="points" aria-pressed="false">POINT EVENTS</button><button type="button" data-filter="team" aria-pressed="false">TEAM</button><button type="button" data-filter="cl" aria-pressed="false">FINAL</button></div><div class="timeline" id="events"></div>
+    <div class="road-cta rv">
+      <p>参加の申し込み方法・受付開始は、オープンチャットでお知らせします。まずは気軽に参加してください。</p>
+      <a class="btn or oc" target="_blank" rel="noopener">オープンチャットに参加 <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
 
 <section class="concept" id="concept">
   <div class="wrap">
@@ -69,25 +90,6 @@
       <figure class="competition-photo"><img src="img/between-throws.jpg" alt="青空の下でモルック棒を抱え、考える選手" loading="lazy"><figcaption>次の一投を、考える。</figcaption></figure>
       </div>
     <div class="stats" id="stats"></div>
-  </div>
-</section>
-
-<section class="road" id="schedule">
-  <div class="wrap">
-    <div class="road-head">
-      <div>
-        <div class="eyebrow rv">年間スケジュール / <span id="yr2"></span></div>
-        <div class="display-label">THE SEASON</div><h2 class="sec-title rv d1">北海道を巡る。<br>頂点を目指す。</h2>
-        <p class="sec-lead rv d2">冬のミニ大会からはじまり、秋のCLでシーズンが終わります。<b class="o">ポイントがつく大会</b>に出て、CL出場を目指しましょう。</p>
-      </div>
-    </div>
-    <div class="notice rv"><i>開催予定</i><span id="note"></span></div>
-    <p class="photo-note">写真は過去大会の様子です。</p>
-    <div class="timeline" id="events"></div>
-    <div class="road-cta rv">
-      <p>参加の申し込み方法・受付開始は、オープンチャットでお知らせします。まずは気軽に参加してください。</p>
-      <a class="btn or oc" target="_blank" rel="noopener">オープンチャットに参加 <span class="arw">→</span></a>
-    </div>
   </div>
 </section>
 
@@ -120,12 +122,13 @@
 <section class="hof" id="hof">
   <div class="wrap">
     <div class="eyebrow rv">大会の記録</div>
-    <h2 class="sec-title rv d1">歴代チャンピオン</h2>
+    <div class="display-label">THE CHAMPIONS</div><h2 class="sec-title rv d1">歴代チャンピオン</h2>
     <p class="sec-lead rv d2">各シーズンの年間王者と、大会優勝者。</p>
-    <figure class="champion-feature">
-      <img src="img/champion-2026.jpg" alt="2026年CL優勝トロフィーを持つ古田優弥" loading="lazy">
-      <figcaption><span>2026 年間チャンピオン</span><strong>古田 優弥</strong><a href="https://www.youtube.com/watch?v=ecBjNCgyaY4" target="_blank" rel="noopener">CL決勝を見る ↗</a></figcaption>
-    </figure>
+    <div class="champions-grid">
+      <figure><img src="img/champion-2026.jpg" alt="2026年間王者・古田優弥" loading="lazy"><figcaption><span>2026 / CL CHAMPION</span><strong>古田 優弥</strong><a href="https://www.youtube.com/watch?v=ecBjNCgyaY4" target="_blank" rel="noopener">CL決勝を見る ↗</a></figcaption></figure>
+      <figure><img src="img/champion-2025.jpg" alt="トロフィーを持つ2025年間王者・髙村諭卓" loading="lazy"><figcaption><span>2025 / CL CHAMPION</span><strong>髙村 諭卓</strong></figcaption></figure>
+      <figure><img src="img/champion-2024.jpg" alt="写真左が2024年間王者・浜口貴志" loading="lazy"><figcaption><span>2024 / CL CHAMPION</span><strong>浜口 貴志</strong><small>写真左</small></figcaption></figure>
+    </div>
     <div id="hofList"></div>
   </div>
 </section>
@@ -142,7 +145,7 @@
 <section class="gallery-sec">
   <div class="wrap">
     <div class="eyebrow rv">大会の風景</div>
-    <h2 class="sec-title rv d1">大会PV・写真</h2>
+    <div class="display-label">ALL IN.<br>EVERY MOMENT.</div><h2 class="sec-title rv d1">大会PV・写真</h2>
     <div class="pv rv"><iframe id="pv" title="モルック北海道カップ PV" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     <div class="mosaic">
       <figure class="m1"><img src="img/sky-throw.jpg" alt="青空の下で投擲する選手" loading="lazy"><figcaption>投擲</figcaption></figure>
@@ -198,7 +201,7 @@
   </div>
 </footer>
 
-<script src="data.js?v=20261011q"></script>
+<script src="data.js?v=20261012a"></script>
 <script>
 (function(){
   const S = window.SITE, L = S.links;
@@ -224,8 +227,8 @@
     const isNext = e === next;
     const days = Math.round((d - today) / 864e5);
     const photos = {mini:'g5.jpg',point:'outdoor-release.jpg',team:'team-smiles.jpg',fes:'team-celebration.jpg',cl:'champion-2026.jpg'};
-    return `<article class="ev ${e.type} ${fin ? 'final' : ''} ${isNext ? 'next' : ''} rv">
-      <div class="event-photo"><img src="img/${({'#1':'outdoor-release.jpg','#2':'high-five.jpg','#3':'side-throw.jpg','#5':'sunlit-throw.jpg'})[e.no] || photos[e.type] || 'outdoor-release.jpg'}" alt="" loading="lazy"></div>
+    return `<article data-type="${e.type}" class="ev ${e.type} ${fin ? 'final' : ''} ${isNext ? 'next' : ''} rv">
+      <div class="event-photo"><span class="event-region">${esc(e.area)} / HOKKAIDO</span><img src="img/${({'#1':'outdoor-release.jpg','#2':'high-five.jpg','#3':'side-throw.jpg','#5':'sunlit-throw.jpg'})[e.no] || photos[e.type] || 'outdoor-release.jpg'}" alt="" loading="lazy"></div>
       <div class="date"><div class="md">${d.getMonth()+1}.${d.getDate()}</div><div class="dow">${d.getFullYear()} ${DOW[d.getDay()]}</div></div>
       <div>
         ${isNext ? `<div class="nextbadge">NEXT <b>${days === 0 ? '今日！' : 'あと' + days + '日'}</b></div>` : ''}${fin ? '<span class="final-label">FINAL</span>' : ''}
@@ -233,7 +236,7 @@
         <div class="venue"><a href="${map}" target="_blank" rel="noopener">${esc(e.venue)}</a>（${esc(e.area)}）</div>
         <ul>${e.points.map(p => `<li>${esc(p)}</li>`).join('')}</ul>
       </div>
-      <div class="kind">${KIND[e.type] || ''}</div>
+      <div class="kind">${KIND[e.type] || ''} EVENT</div>
       ${fin ? '<img class="trophy" src="img/logo.png" alt="">' : ''}
     </article>`;
   }).join('');
@@ -254,6 +257,12 @@
   $('voiceList').innerHTML = S.voices.map(v => `<div class="voice"><div class="q">”</div><p>${esc(v.text)}</p><div class="who"><div class="av">${esc(v.name.slice(0,1))}</div><div><div class="nm">${esc(v.name)}</div><div class="tm">${esc(v.team)}</div></div></div></div>`).join('');
   $('orgs').innerHTML = S.organizers.map(o => `<div class="org rv">${o.img ? `<img src="${o.img}" alt="${esc(o.name)}">` : esc(o.name)}</div>`).join('');
 
+  document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
+    const filter = button.dataset.filter;
+    document.querySelectorAll('[data-filter]').forEach(b => { b.classList.toggle('active', b === button); b.setAttribute('aria-pressed', String(b === button)); });
+    document.querySelectorAll('#events .ev').forEach(card => { card.hidden = !(filter === 'all' || (filter === 'points' ? card.dataset.type === 'point' : card.dataset.type === filter)); });
+    reveal();
+  }));
   const vl = $('voiceList');
   document.querySelectorAll('.v-nav button').forEach(b => b.addEventListener('click', () => vl.scrollBy({left: +b.dataset.d * (vl.clientWidth * .8), behavior:'smooth'})));
 
