@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="design.css?v=20261011b">
+<link rel="stylesheet" href="design.css?v=20261011c">
 </head>
 <body>
 
@@ -41,7 +41,7 @@
 
       <div><div class="season-pill"><i>SEASON</i><span id="yr"></span></div></div>
       <div class="hero-name">MÖLKKY HOKKAIDO CUP</div>
-      <h1>真剣勝負を、<br>北海道に。</h1>
+      <h1><span>モルック</span><br>北海道カップ</h1><p class="hero-message">真剣勝負を、北海道に。</p>
 
       <p class="lead">北海道各地を舞台に、年間の頂点を競う。<br>モルック北海道カップ 2027。</p>
       <div class="cta">
@@ -50,9 +50,11 @@
       </div>
     </div>
   </div>
-  <div class="hero-caption">2025 トリプルスカップ / 投擲直後の一瞬。</div>
+  <div class="hero-caption">HOKKAIDO / 一投に、すべてを。</div>
 
 </div>
+
+<div class="next-race"><div class="wrap"><div class="countdown" id="countdown" hidden></div><a class="next-link" href="#schedule">大会日程を見る ↗</a></div></div>
 
 <section class="concept" id="concept">
   <div class="wrap">
@@ -66,7 +68,6 @@
       </div>
       <figure class="competition-photo"><img src="img/outdoor-release.jpg" alt="屋外コートで狙いを定める選手" loading="lazy"><figcaption>狙いを定める。一本を取りきる。</figcaption></figure>
       </div>
-    </div>
     <div class="stats" id="stats"></div>
   </div>
 </section>
@@ -76,12 +77,12 @@
     <div class="road-head">
       <div>
         <div class="eyebrow rv">年間スケジュール / <span id="yr2"></span></div>
-        <h2 class="sec-title rv d1">大会日程</h2>
+        <div class="display-label">THE SEASON</div><h2 class="sec-title rv d1">北海道を巡る。<br>頂点を目指す。</h2>
         <p class="sec-lead rv d2">冬のミニ大会からはじまり、秋のCLでシーズンが終わります。<b class="o">ポイントがつく大会</b>に出て、CL出場を目指しましょう。</p>
       </div>
     </div>
     <div class="notice rv"><i>開催予定</i><span id="note"></span></div>
-    <div class="countdown rv" id="countdown" hidden></div>
+    <p class="photo-note">写真は過去大会の様子です。</p>
     <div class="timeline" id="events"></div>
     <div class="road-cta rv">
       <p>参加の申し込み方法・受付開始は、オープンチャットでお知らせします。まずは気軽に参加してください。</p>
@@ -91,9 +92,10 @@
 </section>
 
 <section class="system" id="system">
+  <div class="final-photo" aria-hidden="true"></div>
   <div class="wrap">
     <div class="eyebrow rv">出場の仕組み</div>
-    <h2 class="sec-title rv d1">CLまでの道</h2>
+    <div class="display-label">THE FINAL</div><h2 class="sec-title rv d1">最後に立つのは、16人。</h2>
     <p class="sec-lead rv d2">CL（チャンピオンズリーグ）は、その年の北海道王者を決める最終戦。チームカップ優勝チーム全員（2〜4名）と、年間ポイント上位の選手（残り12〜14名）が出場し、合計16名で競います。</p>
     <div class="steps">
       <div class="step rv"><div class="n">01</div><h3>大会に出る</h3><p>#1・#2・#3・#5では、順位に応じて年間ポイントを獲得できます。</p></div>
@@ -217,7 +219,9 @@
     const fin = e.type === 'cl';
     const isNext = e === next;
     const days = Math.round((d - today) / 864e5);
+    const photos = {mini:'g5.jpg',point:'outdoor-release.jpg',team:'match-reaction.jpg',fes:'group.jpg',cl:'champion-2026.jpg'};
     return `<article class="ev ${e.type} ${fin ? 'final' : ''} ${isNext ? 'next' : ''} rv">
+      <div class="event-photo"><img src="img/${({'#1':'outdoor-release.jpg','#2':'g1.jpg','#3':'outdoor-throw.jpg','#5':'sky-throw.jpg'})[e.no] || photos[e.type] || 'outdoor-release.jpg'}" alt="" loading="lazy"></div>
       <div class="date"><div class="md">${d.getMonth()+1}.${d.getDate()}</div><div class="dow">${d.getFullYear()} ${DOW[d.getDay()]}</div></div>
       <div>
         ${isNext ? `<div class="nextbadge">NEXT <b>${days === 0 ? '今日！' : 'あと' + days + '日'}</b></div>` : ''}${fin ? '<span class="final-label">FINAL</span>' : ''}
@@ -233,7 +237,7 @@
   if (next) {
     const nd = new Date(next.date + 'T00:00:00+09:00'); const days = Math.round((nd - today) / 864e5);
     const cd = $('countdown'); cd.hidden = false;
-    cd.innerHTML = `<span class="lbl">NEXT GAME</span><span class="nm">${esc(next.name)}${S.season}${next.no ? ' ' + esc(next.no) : ''}${next.tentative ? '（仮）' : ''}</span><span class="days">${days === 0 ? 'TODAY' : days}<small>${days === 0 ? '' : '日後'}</small></span>`;
+    cd.innerHTML = `<span class="lbl">NEXT STOP</span><span class="nm">${esc(next.name)}${S.season}${next.no ? ' ' + esc(next.no) : ''}${next.tentative ? '（仮）' : ''}</span><span class="days">${days === 0 ? 'TODAY' : days}<small>${days === 0 ? '' : '日後'}</small></span>`;
   }
   $('stats').innerHTML = S.stats.map((s,i) => `<div class="stat rv d${i}"><div class="v">${esc(s.num)}<small>${esc(s.unit)}</small></div><div class="l">${esc(s.label)}</div></div>`).join('');
   $('flow').innerHTML = S.flow.map(f => `<li><h3>${esc(f.t)}</h3><p>${esc(f.b)}</p></li>`).join('');
