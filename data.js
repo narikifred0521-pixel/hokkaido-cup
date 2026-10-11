@@ -10,7 +10,6 @@ window.SITE = {
 
   links: {
     openchat: "https://line.me/ti/g2/shrQBbOGDfDzFVCZJ0HBR3cUnl4RiWYGYbJPNw",
-    livepocket: "https://livepocket.jp/p/hokkaido_moken",
     pv: "crWoFrNmBuA", // YouTube動画ID
     email: "hokkaidomoken@gmail.com",
   },

@@ -327,8 +327,8 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
     <div class="notice rv"><i>NOTICE</i><span id="note"></span></div>
     <div class="timeline" id="events"></div>
     <div class="road-cta rv">
-      <p>申し込みはチケットサイト「LivePocket」から。受付が始まったら、オープンチャットでお知らせします。</p>
-      <a class="btn or" id="lp" target="_blank" rel="noopener">LivePocketを見る <span class="arw">→</span></a>
+      <p>参加の申し込み方法・受付開始は、オープンチャットでお知らせします。まずは気軽に参加してください。</p>
+      <a class="btn or oc" target="_blank" rel="noopener">オープンチャットに参加 <span class="arw">→</span></a>
     </div>
   </div>
 </section>
@@ -390,8 +390,8 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
     <div class="join rv">
       <svg viewBox="0 0 400 400" fill="none" aria-hidden="true"><path d="M20 380 C 60 180, 200 60, 390 30" stroke="#fff" stroke-width="18" stroke-linecap="round"/><path d="M100 400 C 150 240, 260 140, 400 110" stroke="#0B85AA" stroke-width="12" stroke-linecap="round"/></svg>
       <div>
-        <h2>最新情報は<br>オープンチャットで。</h2>
-        <p>受付開始・会場の詳細・当日の案内は、LINEオープンチャットで先にお知らせします。気軽にのぞいてみてください。</p>
+        <h2>参加の入り口は<br>オープンチャット。</h2>
+        <p>大会の申し込み・会場の詳細・当日の案内は、すべてLINEオープンチャットでお知らせしています。わからないことも、ここで気軽に聞いてください。</p>
       </div>
       <div class="cta"><a class="btn wh oc" target="_blank" rel="noopener">オープンチャットに参加 <span class="arw">→</span></a></div>
     </div>
@@ -413,7 +413,7 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
   </div>
 </footer>
 
-<script src="data.js?v=20261011b"></script>
+<script src="data.js?v=20261011c"></script>
 <script>
 (function(){
   const S = window.SITE, L = S.links;
@@ -426,7 +426,6 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
   $('upd').textContent = S.updated.replace(/-/g,'.');
   $('note').textContent = S.note;
   document.querySelectorAll('.oc').forEach(a => a.href = L.openchat);
-  $('lp').href = L.livepocket;
   $('pv').src = 'https://www.youtube-nocookie.com/embed/' + L.pv;
   $('mail').href = 'mailto:' + L.email; $('mail').textContent = L.email;
 
