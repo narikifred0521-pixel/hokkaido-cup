@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="design.css?v=20261011d">
+<link rel="stylesheet" href="design.css?v=20261011e">
 </head>
 <body>
 
@@ -66,7 +66,7 @@
         <p class="rv d2">参加条件はありません。はじめての大会でも、家族や友達と一緒でも大歓迎です。</p>
 
       </div>
-      <figure class="competition-photo"><img src="img/outdoor-release.jpg" alt="屋外コートで狙いを定める選手" loading="lazy"><figcaption>狙いを定める。一本を取りきる。</figcaption></figure>
+      <figure class="competition-photo"><img src="img/between-throws.jpg" alt="青空の下でモルック棒を抱え、考える選手" loading="lazy"><figcaption>次の一投を、考える。</figcaption></figure>
       </div>
     <div class="stats" id="stats"></div>
   </div>
@@ -146,8 +146,12 @@
     <div class="pv rv"><iframe id="pv" title="モルック北海道カップ PV" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     <div class="mosaic">
       <figure class="m1"><img src="img/sky-throw.jpg" alt="青空の下で投擲する選手" loading="lazy"><figcaption>投擲</figcaption></figure>
-      <figure class="m2"><img src="img/outdoor-release.jpg" alt="狙いを定めて投擲する選手" loading="lazy"><figcaption>一本に集中する。</figcaption></figure>
+      <figure class="m2"><img src="img/low-throw.jpg" alt="低い姿勢から投擲する選手" loading="lazy"><figcaption>一本に集中する。</figcaption></figure>
       <figure class="m3"><img src="img/match-reaction.jpg" alt="投擲後に拳を握る選手" loading="lazy"><figcaption>決めた瞬間。</figcaption></figure>
+      <figure class="moment"><img src="img/grip.jpg" alt="投擲前にモルック棒を握る手元" loading="lazy"><figcaption>一投の前に。</figcaption></figure>
+      <figure class="moment"><img src="img/focused-throw.jpg" alt="モルック棒を構えて狙う選手" loading="lazy"><figcaption>狙いを定める。</figcaption></figure>
+      <figure class="moment" id="moments"><img src="img/celebration-hug.jpg" alt="笑顔で抱き合う選手たち" loading="lazy"><figcaption>喜びを、分かち合う。</figcaption></figure>
+      <figure class="moment"><img src="img/high-five.jpg" alt="笑顔でハイタッチする選手たち" loading="lazy"><figcaption>仲間とともに。</figcaption></figure>
       <figure class="m4"><img src="img/group.jpg" alt="大会会場に集まった参加者" loading="lazy"><figcaption>北海道に、真剣勝負の場を。</figcaption></figure>
     </div>
   </div>
@@ -219,9 +223,9 @@
     const fin = e.type === 'cl';
     const isNext = e === next;
     const days = Math.round((d - today) / 864e5);
-    const photos = {mini:'g5.jpg',point:'outdoor-release.jpg',team:'match-reaction.jpg',fes:'group.jpg',cl:'champion-2026.jpg'};
+    const photos = {mini:'g5.jpg',point:'outdoor-release.jpg',team:'team-smiles.jpg',fes:'team-celebration.jpg',cl:'champion-2026.jpg'};
     return `<article class="ev ${e.type} ${fin ? 'final' : ''} ${isNext ? 'next' : ''} rv">
-      <div class="event-photo"><img src="img/${({'#1':'outdoor-release.jpg','#2':'g1.jpg','#3':'outdoor-throw.jpg','#5':'sky-throw.jpg'})[e.no] || photos[e.type] || 'outdoor-release.jpg'}" alt="" loading="lazy"></div>
+      <div class="event-photo"><img src="img/${({'#1':'outdoor-release.jpg','#2':'high-five.jpg','#3':'side-throw.jpg','#5':'sunlit-throw.jpg'})[e.no] || photos[e.type] || 'outdoor-release.jpg'}" alt="" loading="lazy"></div>
       <div class="date"><div class="md">${d.getMonth()+1}.${d.getDate()}</div><div class="dow">${d.getFullYear()} ${DOW[d.getDay()]}</div></div>
       <div>
         ${isNext ? `<div class="nextbadge">NEXT <b>${days === 0 ? '今日！' : 'あと' + days + '日'}</b></div>` : ''}${fin ? '<span class="final-label">FINAL</span>' : ''}
