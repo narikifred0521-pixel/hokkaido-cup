@@ -76,7 +76,7 @@ window.SITE = {
   ],
 
   stats: [
-    { num: "908", unit: "名", label: "これまでの参加者（延べ）" },
+    { num: "1,373", unit: "名", label: "これまでの参加者（延べ）" },
     { num: "2024", unit: "年〜", label: "大会がスタート" },
     { num: "参加条件", unit: "なし", label: "はじめての人も歓迎" },
   ],
