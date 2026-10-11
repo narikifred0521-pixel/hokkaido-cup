@@ -107,6 +107,259 @@ window.SITE = {
     { q: "どうやって申し込むの？", a: "申し込み方法・受付開始はオープンチャットでお知らせしています。まずはオープンチャットに参加してください。" },
   ],
 
+  archives: [
+  {
+    "year": 2026,
+    "matches": [
+      {
+        "event": "#0-1 ミニ",
+        "match": "エド vs けんばぺ",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "RtE9U4-3c2A"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "#0-2 ミニ",
+        "match": "がもげん vs しゅん",
+        "videos": [
+          {
+            "label": "2セット目〜",
+            "id": "5A4tAm6T5bA"
+          },
+          {
+            "label": "1セット目・途中から",
+            "id": "Go1IIqOs4nk"
+          }
+        ],
+        "channel": "iGo軍団のアイゴーラボ"
+      },
+      {
+        "event": "#1 シングルス",
+        "match": "しもP vs もるまさ",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "GmKo-CuNlRs"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "#2 ダブルス",
+        "match": "アニメパンダ vs 友国",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "QS7MxSVknNU"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "#3 江差シングルス",
+        "match": "くに vs みつみつ",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "yV9OD9-16E4"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "#4 トリプルス",
+        "match": "ICE CANDY vs iGo軍団",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "4NObYvUrg5o"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "#5 シングルス",
+        "match": "kyo16 vs イシオスタ",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "TuSFIkCYEDY"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "CL",
+        "match": "しもP vs もるまさ",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "ecBjNCgyaY4"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      }
+    ]
+  },
+  {
+    "year": 2025,
+    "matches": [
+      {
+        "event": "ミニ #0",
+        "match": "スッチ vs もるまさ",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "ilYc4OAonQI"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "#1 シングルス",
+        "match": "はやだい vs イシオスタ",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "LRBGDBYM32s"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "#2 ダブルス",
+        "match": "fukagawacia 超 vs マケズギライ",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "ip9Rjez0S4Q"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "トリプルス",
+        "match": "iGo軍団 vs マケズギライ",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "Bj809gFXg9E"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "CL",
+        "match": "YTK vs もるまさ",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "7Zfz6gtzrIY"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "matches": [
+      {
+        "event": "第1回シングルス",
+        "match": "もきち vs オオイ",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "PTfh7LH7NZs"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "第2回シングルス",
+        "match": "八村健 vs ごますり",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "UDpMF_OJriA"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "第3回シングルス",
+        "match": "ハマ vs せわし",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "kFMz4AoQB0s"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "第4回シングルス",
+        "match": "世界のカワノ vs ごー",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "1KGBR7csk6w"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "第5回シングルス",
+        "match": "しむりゅう vs なかちょ",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "CZuwQRHJ1B0"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "ダブルス",
+        "match": "ハマわっきー vs もるまさけんばぺ",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "vuekdKcfq6Q"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "トリプルス",
+        "match": "viviri vs NAGYEP。",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "qUhPlFFIflY"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
+        "event": "CL",
+        "match": "ハマ vs けんばぺ",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "OZQXkRN69g4"
+          }
+        ],
+        "channel": "もるまさの試合動画銀行"
+      }
+    ]
+  }
+],
+
   // 歴代チャンピオン（新しい年を上に足していく）
   hallOfFame: [
     {

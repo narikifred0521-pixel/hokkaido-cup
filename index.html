@@ -319,6 +319,21 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
 .hero .inner .wrap>*:nth-child(2){animation-delay:.08s}.hero .inner .wrap>*:nth-child(3){animation-delay:.14s}
 .hero .inner .wrap>*:nth-child(4){animation-delay:.22s}.hero .inner .wrap>*:nth-child(5){animation-delay:.28s}.hero .inner .wrap>*:nth-child(6){animation-delay:.36s}
 @media (prefers-reduced-motion:reduce){.hero .inner .wrap>*{animation:none}}
+
+.archive-sec{background:var(--paper)}
+.archive-year{border-bottom:1px solid var(--line);padding:22px 0}
+.archive-year summary{cursor:pointer;font-family:var(--en);font-size:28px;font-weight:800}
+.archive-year summary span{font-family:var(--head);font-size:14px;margin-left:14px;color:var(--ink-2)}
+.archive-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:24px}
+.archive-match{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.archive-match h3{font-size:17px;color:var(--teal)}
+.archive-match p{font-size:14px;margin-top:8px}
+.archive-match .source{font-size:12px;color:var(--ink-2)}
+.archive-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.archive-links a{display:inline-block;padding:9px 15px;background:var(--teal);color:#fff;border-radius:8px;font-size:13px;font-weight:700}
+.archive-links a:hover{background:var(--teal-dd)}
+@media(max-width:600px){.archive-grid{grid-template-columns:1fr}.archive-match{padding:20px}}
+
 </style>
 </head>
 <body>
@@ -435,6 +450,15 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
   </div>
 </section>
 
+<section class="archive-sec" id="archives">
+  <div class="wrap">
+    <div class="eyebrow rv">Finals Archive</div>
+    <h2 class="sec-title rv d1">あの決勝を、もう一度。</h2>
+    <p class="sec-lead rv d2">過去の決勝戦を年ごとに。もるまさ・iGo軍団の配信から、熱戦を振り返れます。</p>
+    <div id="archiveList"></div>
+  </div>
+</section>
+
 <section class="gallery-sec">
   <div class="wrap">
     <div class="eyebrow rv">Movie &amp; Photos</div>
@@ -493,7 +517,7 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
   </div>
 </footer>
 
-<script src="data.js?v=20261011n"></script>
+<script src="data.js?v=20261011o"></script>
 <script>
 (function(){
   const S = window.SITE, L = S.links;
@@ -546,6 +570,7 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
       <div class="hof-champ"><span class="lbl">CL CHAMPION</span><div class="crown">🏆</div><div class="nm">${esc(h.champion)}</div><p>モルック北海道カップ${h.year} 年間チャンピオン</p><div class="yr">${h.year}</div></div>
       <div class="hof-list">${h.winners.length ? h.winners.map(w => `<div class="row"><span class="ev2">${esc(w[0])}</span><span class="w">${esc(w[1])}</span></div>`).join('') : `<p class="hof-note">${esc(h.note || '')}</p>`}</div>
     </div>`).join('');
+  $('archiveList').innerHTML = S.archives.map((a,i) => `<details class="archive-year"${i===0?' open':''}><summary>${esc(a.year)}<span>${a.matches.length}大会の決勝</span></summary><div class="archive-grid">${a.matches.map(m => `<article class="archive-match"><h3>${esc(m.event)}</h3><p>${esc(m.match)}</p><p class="source">配信：${esc(m.channel)}</p><div class="archive-links">${m.videos.map(v => `<a href="https://www.youtube.com/watch?v=${encodeURIComponent(v.id)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(a.year)} ${esc(m.event)} ${esc(v.label)}（YouTube・別タブ）">▶ ${esc(v.label)}</a>`).join('')}</div></article>`).join('')}</div></details>`).join('');
   $('voiceList').innerHTML = S.voices.map(v => `<div class="voice"><div class="q">”</div><p>${esc(v.text)}</p><div class="who"><div class="av">${esc(v.name.slice(0,1))}</div><div><div class="nm">${esc(v.name)}</div><div class="tm">${esc(v.team)}</div></div></div></div>`).join('');
   $('orgs').innerHTML = S.organizers.map(o => `<div class="org rv">${o.img ? `<img src="${o.img}" alt="${esc(o.name)}">` : esc(o.name)}</div>`).join('');
 
