@@ -12,3 +12,29 @@
 html{scroll-padding-top:150px}.countdown{flex-wrap:nowrap}.countdown .nm{flex-basis:auto}.event-filters button:focus-visible{outline:2px solid var(--teal);outline-offset:-6px}@media(max-width:760px){html{scroll-padding-top:125px}.season-index{display:none}.countdown{flex-wrap:wrap}}
 
 .champions-grid img{object-fit:contain;background:#edf3f3}@media(max-width:760px){.event-filters button{font-size:15px;padding:14px 12px}}
+
+/* Reading hierarchy: restrained headings, clear details, consistent rhythm. */
+:root{--series-font:'Montserrat','Noto Sans JP',sans-serif}
+body{font-size:18px;line-height:1.75;color:#143541}
+.hero h1.english-title{font-family:var(--series-font);font-size:clamp(48px,4.6vw,72px);font-weight:500;line-height:1.16;letter-spacing:-.035em}
+.hero h1.english-title span{font-size:.58em;letter-spacing:.1em;font-weight:500}
+.hero-message{font-weight:500;font-size:24px;letter-spacing:.06em;margin-top:28px}
+.hero-name{font-size:16px;letter-spacing:.06em}.season-pill{font-size:16px}.hero .btn{font-size:17px;font-weight:700}
+.display-label,.system .display-label,.gallery-sec .display-label{font-family:var(--series-font);font-size:clamp(36px,4vw,56px);font-weight:600;letter-spacing:-.03em;line-height:1.2;margin-top:15px}
+.heading-kicker{display:block;font-size:16px;letter-spacing:.12em;font-weight:600;margin-bottom:12px;color:var(--ink-2)}
+.sec-title,.concept h2{font-size:34px;font-weight:700;letter-spacing:-.025em;line-height:1.5}
+.road .sec-title,.system .sec-title{font-size:26px;font-weight:600;line-height:1.5;margin-top:16px}
+.concept p,.sec-lead,.step p,.flow p,.faq .ans,.voice p,.join p{font-size:18px;line-height:1.8;color:#365563;max-width:42em}
+.system .sec-lead,.system .step p{color:#fff}.system .sec-lead{max-width:39em}
+.eyebrow{font-size:14px;letter-spacing:.08em;font-weight:500}.sec-lead{margin-top:16px}
+.road{padding:70px 0}.notice{margin-top:25px;padding:16px 20px;background:var(--teal-l);font-size:15px;line-height:1.7}.notice i{font-size:14px;font-weight:700;flex-shrink:0}.photo-note{font-size:14px;margin-top:16px}
+.event-filters{margin-top:18px}.event-filters button{font-family:var(--head);font-weight:600;font-size:16px;padding:16px 24px;letter-spacing:0}
+.ev .date .md{font-family:var(--series-font);font-size:28px;font-weight:600;letter-spacing:-.03em}.ev .date .dow{font-family:var(--series-font);font-size:13px;letter-spacing:.025em;color:var(--ink-2)}
+.ev .date,.ev.final .date{padding:24px 24px 0}.ev .date+div,.ev.final .date+div{padding:16px 24px 24px}.ev .title{font-size:22px;font-weight:700;line-height:1.5;letter-spacing:-.025em;gap:10px}.ev .no{font-family:var(--series-font);font-size:15px;line-height:1.4}.ev .tag{font-size:13px;line-height:1.5;padding:3px 7px}.ev .venue{font-size:16px;line-height:1.7;margin-top:18px;color:#365563}.ev .venue a{text-underline-offset:4px}.ev ul{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}.ev li{font-size:16px;line-height:1.7;margin-top:7px;color:#365563}.ev .kind{font-family:var(--series-font);font-size:13px;font-weight:600;letter-spacing:.08em;padding:14px 24px}.event-region{font-size:15px;left:24px;line-height:1.6}.event-photo,.ev.final .event-photo{height:240px}
+.nextbadge{font-family:var(--series-font);font-size:13px;letter-spacing:.05em}.nextbadge b{display:inline;margin-left:8px;font-family:var(--head);font-weight:500}
+.countdown .nm{font-size:18px;line-height:1.6}.countdown .lbl{font-family:var(--series-font);font-size:14px;letter-spacing:.08em}.countdown .days{font-family:var(--series-font);font-size:36px;font-weight:600}.next-link{font-size:16px}
+.step h3,.flow h3{font-size:23px;font-weight:600}.faq summary{font-size:19px;font-weight:600;line-height:1.6;padding:22px 0}.faq .ans{padding-bottom:22px}.hof-list .row,.archive-match h3,.archive-match p,.archive-links a{font-size:16px;line-height:1.7}.champions-grid strong{font-size:26px;font-weight:600}.champions-grid figcaption span{font-family:var(--series-font);font-size:14px}.champions-grid a,.champions-grid small{font-size:16px}.stat .l{font-size:16px}.competition-photo figcaption{font-size:16px}.road-cta p{font-size:17px;line-height:1.8}.btn{font-size:17px}
+@media(max-width:1000px){.display-label{font-size:44px}.ev .title{font-size:21px}}
+@media(max-width:760px){body{font-size:16px;line-height:1.75}.hero h1.english-title{font-size:clamp(27px,7.6vw,48px);font-weight:500;line-height:1.2;letter-spacing:-.04em}.hero h1.english-title span{font-size:1.2em;letter-spacing:.035em}.hero-message{font-size:19px;letter-spacing:.02em}.hero-name{font-size:14px}.hero .btn{font-size:16px}.display-label,.system .display-label,.gallery-sec .display-label{font-size:32px;line-height:1.25}.heading-kicker{font-size:14px}.sec-title,.concept h2{font-size:27px}.road .sec-title,.system .sec-title{font-size:22px}.concept p,.sec-lead,.step p,.flow p,.faq .ans,.voice p,.join p{font-size:17px;line-height:1.8}.road{padding:48px 0}.notice{font-size:14px;padding:16px;gap:12px}.photo-note{font-size:13px}.event-filters button{font-size:14px;padding:14px 10px;flex:1;min-height:48px}.timeline{margin-top:22px}.ev .title{font-size:21px}.ev .date .md{font-size:27px}.ev .date .dow{font-size:13px}.ev .venue,.ev li{font-size:16px}.event-photo,.ev.final .event-photo{height:230px}.countdown .nm{font-size:16px}.countdown .days{font-size:34px}.next-link{font-size:15px}.faq summary{font-size:18px}.hof-list .row,.archive-match h3,.archive-match p,.archive-links a{font-size:15px}.stat .l{font-size:13px}.champions-grid figcaption span{font-size:13px}.road-cta p{font-size:16px}.btn{font-size:16px}}
+
+.join p{color:white}@media(max-width:760px){.event-filters button{font-size:13px;padding:14px 7px;min-width:0}}

@@ -16,9 +16,9 @@
 <link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="design.css?v=20261012a">
-<link rel="stylesheet" href="series.css?v=20261012a">
+<link rel="stylesheet" href="series.css?v=20261012b">
 </head>
 <body>
 
@@ -62,14 +62,14 @@
   <div class="wrap">
     <div class="road-head">
       <div>
-        <div class="eyebrow rv">年間スケジュール / <span id="yr2"></span></div>
-        <div class="display-label">EXPLORE<br>THE SEASON<span class="season-index">2027</span></div><h2 class="sec-title rv d1">北海道を巡る。<br>頂点を目指す。</h2>
+        <div class="eyebrow rv">年間スケジュール <span id="yr2" hidden></span></div>
+        <div class="display-label"><span class="heading-kicker">2027 SEASON</span>EXPLORE THE EVENTS</div><h2 class="sec-title rv d1">北海道を巡る。頂点を目指す。</h2>
         <p class="sec-lead rv d2">冬のミニ大会からはじまり、秋のCLでシーズンが終わります。<b class="o">ポイントがつく大会</b>に出て、CL出場を目指しましょう。</p>
       </div>
     </div>
     <div class="notice rv"><i>開催予定</i><span id="note"></span></div>
     <p class="photo-note">写真は過去大会の様子です。</p>
-    <div class="event-filters" aria-label="大会の種類"><button type="button" class="active" data-filter="all" aria-pressed="true">ALL EVENTS</button><button type="button" data-filter="points" aria-pressed="false">POINT EVENTS</button><button type="button" data-filter="team" aria-pressed="false">TEAM</button><button type="button" data-filter="cl" aria-pressed="false">FINAL</button></div><div class="timeline" id="events"></div>
+    <div class="event-filters" aria-label="大会の種類"><button type="button" class="active" data-filter="all" aria-pressed="true">すべての大会</button><button type="button" data-filter="points" aria-pressed="false">ポイント大会</button><button type="button" data-filter="team" aria-pressed="false">チーム大会</button><button type="button" data-filter="cl" aria-pressed="false">CL最終戦</button></div><div class="timeline" id="events"></div>
     <div class="road-cta rv">
       <p>参加の申し込み方法・受付開始は、オープンチャットでお知らせします。まずは気軽に参加してください。</p>
       <a class="btn or oc" target="_blank" rel="noopener">オープンチャットに参加 <span class="arw">→</span></a>
@@ -145,7 +145,7 @@
 <section class="gallery-sec">
   <div class="wrap">
     <div class="eyebrow rv">大会の風景</div>
-    <div class="display-label">ALL IN.<br>EVERY MOMENT.</div><h2 class="sec-title rv d1">大会PV・写真</h2>
+    <div class="display-label">EVERY MOMENT COUNTS</div><h2 class="sec-title rv d1">大会PV・写真</h2>
     <div class="pv rv"><iframe id="pv" title="モルック北海道カップ PV" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     <div class="mosaic">
       <figure class="m1"><img src="img/sky-throw.jpg" alt="青空の下で投擲する選手" loading="lazy"><figcaption>投擲</figcaption></figure>
@@ -232,7 +232,7 @@
       <div class="date"><div class="md">${d.getMonth()+1}.${d.getDate()}</div><div class="dow">${d.getFullYear()} ${DOW[d.getDay()]}</div></div>
       <div>
         ${isNext ? `<div class="nextbadge">NEXT <b>${days === 0 ? '今日！' : 'あと' + days + '日'}</b></div>` : ''}${fin ? '<span class="final-label">FINAL</span>' : ''}
-        <div class="title">${e.no ? `<span class="no">${esc(e.no)}</span>` : ''}<span>${esc(e.name)}${S.season}</span>${e.tentative ? '<span class="tag">仮</span>' : ''}</div>
+        <div class="title">${e.no ? `<span class="no">${esc(e.no)}</span>` : ''}<span>${esc(e.name)}</span>${e.tentative ? '<span class="tag">仮</span>' : ''}</div>
         <div class="venue"><a href="${map}" target="_blank" rel="noopener">${esc(e.venue)}</a>（${esc(e.area)}）</div>
         <ul>${e.points.map(p => `<li>${esc(p)}</li>`).join('')}</ul>
       </div>
