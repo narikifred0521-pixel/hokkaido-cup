@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="design.css?v=20261012a">
-<link rel="stylesheet" href="series.css?v=20261012b">
+<link rel="stylesheet" href="series.css?v=20261012c">
 </head>
 <body>
 
@@ -226,7 +226,7 @@
     const fin = e.type === 'cl';
     const isNext = e === next;
     const days = Math.round((d - today) / 864e5);
-    const photos = {mini:'g5.jpg',point:'outdoor-release.jpg',team:'team-smiles.jpg',fes:'team-celebration.jpg',cl:'champion-2026.jpg'};
+    const photos = {mini:'g5.jpg',point:'outdoor-release.jpg',team:'team-smiles.jpg',fes:'igo-fes.jpg',cl:'champion-2026.jpg'};
     return `<article data-type="${e.type}" class="ev ${e.type} ${fin ? 'final' : ''} ${isNext ? 'next' : ''} rv">
       <div class="event-photo"><span class="event-region">${esc(e.area)} / HOKKAIDO</span><img src="img/${({'#1':'outdoor-release.jpg','#2':'high-five.jpg','#3':'side-throw.jpg','#5':'sunlit-throw.jpg'})[e.no] || photos[e.type] || 'outdoor-release.jpg'}" alt="" loading="lazy"></div>
       <div class="date"><div class="md">${d.getMonth()+1}.${d.getDate()}</div><div class="dow">${d.getFullYear()} ${DOW[d.getDay()]}</div></div>
