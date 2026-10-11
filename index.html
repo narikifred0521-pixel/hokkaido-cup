@@ -7,7 +7,10 @@
 <meta name="description" content="北海道最大級のモルック競技大会「モルック北海道カップ」公式サイト。年間の大会日程・会場・申込はこちら。">
 <meta property="og:title" content="モルック北海道カップ｜Mölkky Hokkaido Cup">
 <meta property="og:description" content="真剣勝負を、北海道に。年間ポイントを貯めてCL（チャンピオンズリーグ）を目指そう。">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="https://narikifred0521-pixel.github.io/hokkaido-cup/img/ogp.jpg">
+<meta property="og:url" content="https://narikifred0521-pixel.github.io/hokkaido-cup/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0B85AA">
 <link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -253,6 +256,59 @@ footer .big{font-family:var(--en);font-weight:900;font-size:clamp(46px,10vw,130p
 footer .big b{color:var(--orange);font-weight:900}
 footer .row{display:flex;flex-wrap:wrap;gap:16px 30px;justify-content:space-between;align-items:flex-end;margin-top:36px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);font-size:13px}
 footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
+
+/* ---------- NEXT ---------- */
+.ev.next{box-shadow:0 0 0 3px var(--orange),0 16px 40px rgba(254,87,1,.18)}
+.ev.next::before{background:var(--orange);border-color:#fff;box-shadow:0 0 0 4px rgba(254,87,1,.3);animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(254,87,1,.35)}50%{box-shadow:0 0 0 10px rgba(254,87,1,0)}}
+.nextbadge{display:inline-flex;align-items:center;gap:8px;font-family:var(--en);font-weight:800;font-size:12px;letter-spacing:.12em;background:var(--orange);color:#fff;padding:4px 12px;border-radius:999px;margin-bottom:8px}
+.nextbadge b{font-family:var(--head);letter-spacing:0;font-size:13px}
+.countdown{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin:0 0 26px;padding:18px 22px;border-radius:var(--r);background:var(--teal-dd);color:#fff}
+.countdown .lbl{font-family:var(--en);font-weight:800;font-size:12px;letter-spacing:.2em;color:#7FD0E8}
+.countdown .nm{font-family:var(--head);font-weight:800;font-size:18px}
+.countdown .days{margin-left:auto;font-family:var(--en);font-weight:900;font-size:44px;line-height:1;color:var(--orange)}
+.countdown .days small{font-family:var(--head);font-size:15px;color:#fff;margin-left:6px}
+
+/* ---------- guide ---------- */
+.guide-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;margin-top:46px;align-items:start}
+.flow{list-style:none;counter-reset:f}
+.flow li{position:relative;padding:0 0 26px 62px}
+.flow li::before{counter-increment:f;content:counter(f);position:absolute;left:0;top:0;width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;font-family:var(--en);font-weight:800;display:grid;place-items:center;font-size:18px}
+.flow li:not(:last-child)::after{content:"";position:absolute;left:21px;top:48px;bottom:4px;width:2px;background:var(--line)}
+.flow li:last-child::before{background:var(--orange)}
+.flow h3{font-size:19px}
+.flow p{color:var(--ink-2);font-size:14.5px}
+.faq details{background:var(--paper);border-radius:16px;margin-bottom:10px;box-shadow:0 1px 0 var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 54px 18px 20px;font-family:var(--head);font-weight:800;font-size:16px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";font-family:var(--en);color:var(--orange);margin-right:10px}
+.faq summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:var(--teal-l);color:var(--teal);display:grid;place-items:center;font-weight:800;transition:transform .2s}
+.faq details[open] summary::after{content:"−";background:var(--teal);color:#fff}
+.faq .ans{padding:0 20px 18px 44px;color:var(--ink-2);font-size:14.5px}
+@media (max-width:860px){.guide-grid{grid-template-columns:1fr;gap:30px}}
+
+/* ---------- hall of fame ---------- */
+.hof{background:var(--paper)}
+.hof-card{margin-top:46px;display:grid;grid-template-columns:.9fr 1.1fr;border-radius:28px;overflow:hidden;box-shadow:0 30px 70px rgba(6,56,74,.14)}
+.hof-champ{position:relative;background:radial-gradient(120% 120% at 0% 0%,#118FB5,var(--teal-d) 50%,var(--teal-dd));color:#fff;padding:40px 36px;overflow:hidden}
+.hof-champ .yr{font-family:var(--en);font-weight:900;font-size:110px;line-height:.8;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.3);position:absolute;right:-6px;bottom:-10px}
+.hof-champ .lbl{display:inline-block;font-family:var(--en);font-weight:800;font-size:12px;letter-spacing:.2em;background:var(--orange);padding:4px 12px;border-radius:999px}
+.hof-champ .crown{font-size:40px;margin-top:22px}
+.hof-champ .nm{font-family:var(--head);font-weight:800;font-size:clamp(30px,4vw,42px);line-height:1.3;margin-top:4px}
+.hof-champ p{color:#bfe3ee;font-size:14px;margin-top:6px;position:relative}
+.hof-list{background:#F2F8FA;padding:26px 30px}
+.hof-list .row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.hof-list .row:last-child{border-bottom:none}
+.hof-list .ev2{color:var(--ink-2);font-weight:700;white-space:nowrap}
+.hof-list .w{font-family:var(--head);font-weight:800;text-align:right}
+@media (max-width:760px){.hof-card{grid-template-columns:1fr}}
+
+/* QR */
+.join .qr{background:#fff;border-radius:18px;padding:10px;width:138px;position:relative;text-align:center}
+.join .qr img{width:118px;height:118px}
+.join .qr span{display:block;font-size:11px;color:var(--teal-d);font-weight:700;margin-top:2px}
+.join .side{display:flex;align-items:center;gap:18px;position:relative}
+@media (max-width:760px){.join .qr{display:none}}
 </style>
 </head>
 <body>
@@ -263,7 +319,7 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
     <a href="#concept">コンセプト</a>
     <a href="#schedule">大会日程</a>
     <a href="#system">CLまでの道</a>
-    <a href="#voices">参加者の声</a>
+    <a href="#guide">はじめての方へ</a>
     <a class="pill" href="#join">参加する</a>
   </nav>
 </header>
@@ -325,6 +381,7 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
       </div>
     </div>
     <div class="notice rv"><i>NOTICE</i><span id="note"></span></div>
+    <div class="countdown rv" id="countdown" hidden></div>
     <div class="timeline" id="events"></div>
     <div class="road-cta rv">
       <p>参加の申し込み方法・受付開始は、オープンチャットでお知らせします。まずは気軽に参加してください。</p>
@@ -347,11 +404,24 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
   </div>
 </section>
 
-<section id="features">
+<section id="guide">
   <div class="wrap">
-    <div class="eyebrow rv">Features</div>
-    <h2 class="sec-title rv d1">北海道カップの特徴</h2>
-    <div class="features" id="featureList"></div>
+    <div class="eyebrow rv">For Beginners</div>
+    <h2 class="sec-title rv d1">はじめての方へ</h2>
+    <p class="sec-lead rv d2">参加条件はありません。はじめての大会でも大丈夫。当日の流れと、よく聞かれることをまとめました。</p>
+    <div class="guide-grid">
+      <ol class="flow rv" id="flow"></ol>
+      <div class="faq rv d1" id="faq"></div>
+    </div>
+  </div>
+</section>
+
+<section class="hof" id="hof">
+  <div class="wrap">
+    <div class="eyebrow rv">Hall of Fame</div>
+    <h2 class="sec-title rv d1">歴代チャンピオン</h2>
+    <p class="sec-lead rv d2">勝てば、ここに名前が残ります。</p>
+    <div id="hofList"></div>
   </div>
 </section>
 
@@ -393,7 +463,7 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
         <h2>参加の入り口は<br>オープンチャット。</h2>
         <p>大会の申し込み・会場の詳細・当日の案内は、すべてLINEオープンチャットでお知らせしています。わからないことも、ここで気軽に聞いてください。</p>
       </div>
-      <div class="cta"><a class="btn wh oc" target="_blank" rel="noopener">オープンチャットに参加 <span class="arw">→</span></a></div>
+      <div class="side"><div class="qr"><img src="img/openchat_qr.png" alt="オープンチャットのQRコード"><span>スマホで読み取り</span></div><div class="cta"><a class="btn wh oc" target="_blank" rel="noopener">オープンチャットに参加 <span class="arw">→</span></a></div></div>
     </div>
 
     <div style="margin-top:70px">
@@ -413,7 +483,7 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
   </div>
 </footer>
 
-<script src="data.js?v=20261011c"></script>
+<script src="data.js?v=20261011d"></script>
 <script>
 (function(){
   const S = window.SITE, L = S.links;
@@ -433,14 +503,18 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
   const line = words.map(w => `<span>${esc(w)}</span>`).join('');
   $('mq').innerHTML = line + line + line + line;
 
+  const today = new Date(new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Tokyo'}) + 'T00:00:00+09:00');
+  const next = S.events.find(e => new Date(e.date + 'T00:00:00+09:00') >= today);
   $('events').innerHTML = S.events.map(e => {
     const d = new Date(e.date + 'T00:00:00+09:00');
     const map = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(e.map || e.venue);
     const fin = e.type === 'cl';
-    return `<article class="ev ${e.type} ${fin ? 'final' : ''} rv">
+    const isNext = e === next;
+    const days = Math.round((d - today) / 864e5);
+    return `<article class="ev ${e.type} ${fin ? 'final' : ''} ${isNext ? 'next' : ''} rv">
       <div class="date"><div class="md">${d.getMonth()+1}.${d.getDate()}</div><div class="dow">${d.getFullYear()} ${DOW[d.getDay()]}</div></div>
       <div>
-        ${fin ? '<span class="final-label">FINAL</span>' : ''}
+        ${isNext ? `<div class="nextbadge">NEXT <b>${days === 0 ? '今日！' : 'あと' + days + '日'}</b></div>` : ''}${fin ? '<span class="final-label">FINAL</span>' : ''}
         <div class="title">${e.no ? `<span class="no">${esc(e.no)}</span>` : ''}<span>${esc(e.name)}${S.season}</span>${e.tentative ? '<span class="tag">仮</span>' : ''}</div>
         <div class="venue">📍 <a href="${map}" target="_blank" rel="noopener">${esc(e.venue)}</a>（${esc(e.area)}）</div>
         <ul>${e.points.map(p => `<li>${esc(p)}</li>`).join('')}</ul>
@@ -450,8 +524,18 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
     </article>`;
   }).join('');
 
+  if (next) {
+    const nd = new Date(next.date + 'T00:00:00+09:00'); const days = Math.round((nd - today) / 864e5);
+    const cd = $('countdown'); cd.hidden = false;
+    cd.innerHTML = `<span class="lbl">NEXT GAME</span><span class="nm">${esc(next.name)}${S.season}${next.no ? ' ' + esc(next.no) : ''}${next.tentative ? '（仮）' : ''}</span><span class="days">${days === 0 ? 'TODAY' : days}<small>${days === 0 ? '' : '日後'}</small></span>`;
+  }
   $('stats').innerHTML = S.stats.map((s,i) => `<div class="stat rv d${i}"><div class="v">${esc(s.num)}<small>${esc(s.unit)}</small></div><div class="l">${esc(s.label)}</div></div>`).join('');
-  $('featureList').innerHTML = S.features.map((f,i) => `<div class="feature rv d${i%2}"><div class="i">0${i+1}</div><div><h3>${esc(f.title)}</h3><p>${esc(f.body)}</p></div></div>`).join('');
+  $('flow').innerHTML = S.flow.map(f => `<li><h3>${esc(f.t)}</h3><p>${esc(f.b)}</p></li>`).join('');
+  $('faq').innerHTML = S.faq.map((f,i) => `<details${i===0?' open':''}><summary>${esc(f.q)}</summary><div class="ans">${esc(f.a)}</div></details>`).join('');
+  $('hofList').innerHTML = S.hallOfFame.map(h => `<div class="hof-card rv">
+      <div class="hof-champ"><span class="lbl">CL CHAMPION</span><div class="crown">🏆</div><div class="nm">${esc(h.champion)}</div><p>モルック北海道カップ${h.year} 年間チャンピオン</p><div class="yr">${h.year}</div></div>
+      <div class="hof-list">${h.winners.map(w => `<div class="row"><span class="ev2">${esc(w[0])}</span><span class="w">${esc(w[1])}</span></div>`).join('')}</div>
+    </div>`).join('');
   $('voiceList').innerHTML = S.voices.map(v => `<div class="voice"><div class="q">”</div><p>${esc(v.text)}</p><div class="who"><div class="av">${esc(v.name.slice(0,1))}</div><div><div class="nm">${esc(v.name)}</div><div class="tm">${esc(v.team)}</div></div></div></div>`).join('');
   $('orgs').innerHTML = S.organizers.map(o => `<div class="org rv">${o.img ? `<img src="${o.img}" alt="${esc(o.name)}">` : esc(o.name)}</div>`).join('');
 
