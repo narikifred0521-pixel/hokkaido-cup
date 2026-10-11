@@ -253,6 +253,17 @@ window.SITE = {
         "channel": "もるまさ@モルック研究所"
       },
       {
+        "event": "#5 シングルス",
+        "match": "みぃーちゃん vs もきち",
+        "videos": [
+          {
+            "label": "決勝を見る",
+            "id": "VNDwbi7bqH0"
+          }
+        ],
+        "channel": "もるまさ@モルック研究所"
+      },
+      {
         "event": "CL",
         "match": "YTK vs もるまさ",
         "videos": [
