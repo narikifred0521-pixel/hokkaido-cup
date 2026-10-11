@@ -5,6 +5,7 @@
 - 仮日程 → `tentative: true`（「仮」バッジ）。確定したら `false`
 - 会場を変える → `venue` / `area` / `map`（Googleマップ検索語）
 - お知らせ文 → `note`
+- data.js を直したら index.html の `data.js?v=…` の数字も変える（スマホのキャッシュ対策）
 - 画像は `img/`
 
 ローカル確認：`python3 -m http.server 8781` → http://localhost:8781
