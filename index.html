@@ -300,6 +300,8 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
 .hof-list .row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
 .hof-list .row:last-child{border-bottom:none}
 .hof-list .ev2{color:var(--ink-2);font-weight:700;white-space:nowrap}
+.hof-note{color:var(--ink-2);font-size:14.5px;padding:10px 0}
+.hof-list{display:flex;flex-direction:column;justify-content:center}
 .hof-list .w{font-family:var(--head);font-weight:800;text-align:right}
 @media (max-width:760px){.hof-card{grid-template-columns:1fr}}
 
@@ -483,7 +485,7 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
   </div>
 </footer>
 
-<script src="data.js?v=20261011e"></script>
+<script src="data.js?v=20261011f"></script>
 <script>
 (function(){
   const S = window.SITE, L = S.links;
@@ -534,7 +536,7 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
   $('faq').innerHTML = S.faq.map((f,i) => `<details${i===0?' open':''}><summary>${esc(f.q)}</summary><div class="ans">${esc(f.a)}</div></details>`).join('');
   $('hofList').innerHTML = S.hallOfFame.map(h => `<div class="hof-card rv">
       <div class="hof-champ"><span class="lbl">CL CHAMPION</span><div class="crown">🏆</div><div class="nm">${esc(h.champion)}</div><p>モルック北海道カップ${h.year} 年間チャンピオン</p><div class="yr">${h.year}</div></div>
-      <div class="hof-list">${h.winners.map(w => `<div class="row"><span class="ev2">${esc(w[0])}</span><span class="w">${esc(w[1])}</span></div>`).join('')}</div>
+      <div class="hof-list">${h.winners.length ? h.winners.map(w => `<div class="row"><span class="ev2">${esc(w[0])}</span><span class="w">${esc(w[1])}</span></div>`).join('') : `<p class="hof-note">${esc(h.note || '')}</p>`}</div>
     </div>`).join('');
   $('voiceList').innerHTML = S.voices.map(v => `<div class="voice"><div class="q">”</div><p>${esc(v.text)}</p><div class="who"><div class="av">${esc(v.name.slice(0,1))}</div><div><div class="nm">${esc(v.name)}</div><div class="tm">${esc(v.team)}</div></div></div></div>`).join('');
   $('orgs').innerHTML = S.organizers.map(o => `<div class="org rv">${o.img ? `<img src="${o.img}" alt="${esc(o.name)}">` : esc(o.name)}</div>`).join('');
