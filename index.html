@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ja">
+<script>document.documentElement.classList.add("js")</script>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,10 +36,10 @@ h1,h2,h3{font-family:var(--head);line-height:1.35}
 b.o{color:var(--orange);font-weight:inherit}
 
 /* ---------- reveal ---------- */
-.rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
-.rv.in{opacity:1;transform:none}
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
 .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.marquee .track{animation:none!important}}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.marquee .track{animation:none!important}}
 
 /* ---------- header ---------- */
 .top{position:fixed;inset:0 0 auto 0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:14px 22px;transition:background .3s,box-shadow .3s,padding .3s}
@@ -311,6 +312,13 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
 .join .qr span{display:block;font-size:11px;color:var(--teal-d);font-weight:700;margin-top:2px}
 .join .side{display:flex;align-items:center;gap:18px;position:relative}
 @media (max-width:760px){.join .qr{display:none}}
+
+/* hero: JSに頼らない読み込みアニメ */
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.hero .inner .wrap>*{animation:up .9s cubic-bezier(.2,.7,.2,1) both}
+.hero .inner .wrap>*:nth-child(2){animation-delay:.08s}.hero .inner .wrap>*:nth-child(3){animation-delay:.14s}
+.hero .inner .wrap>*:nth-child(4){animation-delay:.22s}.hero .inner .wrap>*:nth-child(5){animation-delay:.28s}.hero .inner .wrap>*:nth-child(6){animation-delay:.36s}
+@media (prefers-reduced-motion:reduce){.hero .inner .wrap>*{animation:none}}
 </style>
 </head>
 <body>
@@ -336,12 +344,12 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
   </svg>
   <div class="inner">
     <div class="wrap">
-      <img class="badge rv" src="img/logo.png" alt="Mölkky Hokkaido Cup ロゴ">
-      <div><div class="season-pill rv d1"><i>SEASON</i><span id="yr"></span></div></div>
-      <h1 class="rv d1">M<b class="o">ö</b>l<b class="o">k</b>ky<span class="cup">H<b class="o">O</b>K<b class="o">K</b>A<b class="o">I</b>D<b class="o">O</b> C<b class="o">U</b>P</span></h1>
-      <div class="tagline rv d2"><span>真剣勝負を、北海道に。</span></div>
-      <p class="lead rv d2">北海道最大級のモルック競技大会です。1年を通して各地で大会を開き、成績に応じてポイントを貯めて、シーズン最後の頂上決戦「CL（チャンピオンズリーグ）」を目指します。</p>
-      <div class="cta rv d3">
+      <img class="badge" src="img/logo.png" alt="Mölkky Hokkaido Cup ロゴ">
+      <div><div class="season-pill"><i>SEASON</i><span id="yr"></span></div></div>
+      <h1>M<b class="o">ö</b>l<b class="o">k</b>ky<span class="cup">H<b class="o">O</b>K<b class="o">K</b>A<b class="o">I</b>D<b class="o">O</b> C<b class="o">U</b>P</span></h1>
+      <div class="tagline"><span>真剣勝負を、北海道に。</span></div>
+      <p class="lead">北海道最大級のモルック競技大会です。1年を通して各地で大会を開き、成績に応じてポイントを貯めて、シーズン最後の頂上決戦「CL（チャンピオンズリーグ）」を目指します。</p>
+      <div class="cta">
         <a class="btn or" href="#schedule">大会日程を見る <span class="arw">→</span></a>
         <a class="btn gl oc" target="_blank" rel="noopener">オープンチャットに参加</a>
       </div>
@@ -485,7 +493,7 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
   </div>
 </footer>
 
-<script src="data.js?v=20261011h"></script>
+<script src="data.js?v=20261011i"></script>
 <script>
 (function(){
   const S = window.SITE, L = S.links;
@@ -548,8 +556,17 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,25
   const onScroll = () => top.classList.toggle('solid', scrollY > 60);
   addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+  const reveal = () => {
+    const lim = innerHeight * 0.95;
+    document.querySelectorAll('.rv:not(.in)').forEach(el => { if (el.getBoundingClientRect().top < lim) el.classList.add('in'); });
+  };
+  let tick = false;
+  const onMove = () => { if (!tick) { tick = true; requestAnimationFrame(() => { tick = false; reveal(); }); } };
+  addEventListener('scroll', onMove, {passive:true});
+  addEventListener('resize', onMove);
+  addEventListener('load', reveal);
+  reveal();
+  setTimeout(reveal, 300);
 })();
 </script>
 </body>

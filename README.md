@@ -8,4 +8,6 @@
 - data.js を直したら index.html の `data.js?v=…` の数字も変える（スマホのキャッシュ対策）
 - 画像は `img/`
 
+push前に `./check.sh` で data.js の文法チェック。
+
 ローカル確認：`python3 -m http.server 8781` → http://localhost:8781
