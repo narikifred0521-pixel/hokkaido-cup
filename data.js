@@ -5,8 +5,8 @@
 // ==========================================================
 window.SITE = {
   season: 2027,
-  updated: "2026-10-12",
-  note: "日程・会場はまだすべて仮です。決まりしだい、オープンチャットとこのサイトでお知らせします。",
+  updated: "2026-11-24",
+  note: "#0は開催決定。そのほかの大会の日程・会場はまだ仮です。決まりしだい、オープンチャットとこのサイトでお知らせします。",
 
   links: {
     openchat: "https://line.me/ti/g2/shrQBbOGDfDzFVCZJ0HBR3cUnl4RiWYGYbJPNw",
@@ -18,11 +18,11 @@ window.SITE = {
   // type: mini / point / team / cl / fes
   events: [
     {
-      no: "#0", type: "mini", tentative: true,
+      no: "#0", type: "mini", tentative: false,
       name: "北海道ミニ！シングルスカップ",
       date: "2027-01-30", venue: "札幌ゼスポフィールド", area: "札幌市手稲区",
       map: "札幌ゼスポフィールド",
-      points: ["ポイントなし（腕試し）", "個人戦", "定員32名・先着順"],
+      points: ["ポイントなし（腕試し）", "個人戦", "定員32名・先着順", "申込 12/1（火）20:00〜1/20（水）", "優勝者は年間振り返りPVに出演"],
     },
     {
       no: "#1", type: "point", tentative: true,
